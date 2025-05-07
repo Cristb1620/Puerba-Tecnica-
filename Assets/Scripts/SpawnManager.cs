@@ -41,7 +41,7 @@ public class SpawnManger : MonoBehaviour
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             GameObject enemy = Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-            AssignRandomColorToEnemy(enemy); // Asignar color aleatorio al enemigo
+            AssignRandomColorToEnemy(enemy); 
         }
     }
 
@@ -62,17 +62,17 @@ public class SpawnManger : MonoBehaviour
         if (currentEnemyCount < 10)
         {
             GameObject enemy = Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
-            AssignRandomColorToEnemy(enemy); // Asignar color aleatorio al enemigo
+            AssignRandomColorToEnemy(enemy); 
         }
     }
 
-    // Función para asignar un color aleatorio al material del enemigo
+    
     void AssignRandomColorToEnemy(GameObject enemy)
     {
-        Renderer enemyRenderer = enemy.GetComponent<Renderer>(); // Obtenemos el Renderer del enemigo
-        if (enemyRenderer != null) // Verificamos si el enemigo tiene un Renderer
+        Renderer enemyRenderer = enemy.GetComponent<Renderer>(); 
+        if (enemyRenderer != null) 
         {
-            enemyRenderer.material.color = Random.ColorHSV(); // Asignamos un color aleatorio
+            enemyRenderer.material.color = Random.ColorHSV(); 
         }
     }
 
